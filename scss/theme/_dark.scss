@@ -3,8 +3,19 @@ html.dark {
     --icon-color: brightness(0) saturate(100%) invert(98%) sepia(0%)
         saturate(0%) hue-rotate(2deg) brightness(101%) contrast(105%);
 
+    --body-bg: #292e39;
     --header-bg: #171c28;
     --top-act-group-bg: #292e39;
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
     --top-act-group-saparate: #ededf6;
+
+    // dropdown
+    --dropdown-bg: #2f3441;
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(16%) sepia(38%)
+        saturate(341%) hue-rotate(186deg) brightness(96%) contrast(90%);
+    --dropdown-shadow: rgba(23, 28, 40, 0.4);
+    --top-menu-border-color: #d2d1d6;
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(100%)
+        sepia(100%) saturate(8%) hue-rotate(241deg) brightness(103%)
+        contrast(95%);
 }
