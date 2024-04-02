@@ -1,7 +1,7 @@
 <div class="container">
     <div class="top-bar">
         <!-- more -->
-        <button class="top-bar__more">
+        <button class="top-bar__more d-none d-lg-block js-toggle" toggle-target="#navbar">
             <img src="./assets/icons/more.svg" alt="" class="icon top-bar__more-icon">
         </button>
 
@@ -14,7 +14,24 @@
         </a>
 
         <!-- navbar -->
-        <nav class="navbar">
+        <nav id="navbar" class="navbar hide">
+            <button class="navbar__close-btn js-toggle icon" toggle-target="#navbar">
+                <img src="./assets/icons/arrow-left.svg" alt="">
+            </button>
+
+            <!-- card-btn-mb -->
+            <a href="#!" class="nav-btn d-none d-md-flex">
+                <img src="./assets/icons/buy.svg" alt="" class="nav-btn__icon icon">
+                <span class="nav-btn__title">Card</span>
+                <span class="nav-btn__qnt">3</span>
+            </a>
+
+            <a href="#!" class="nav-btn d-none d-md-flex">
+                <img src="./assets/icons/heart.svg" alt="" class="nav-btn__icon icon">
+                <span class="nav-btn__title">Favorite</span>
+                <span class="nav-btn__qnt">3</span>
+            </a>
+
             <ul class="navbar__list js-dropdown-list">
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link">
@@ -29,7 +46,7 @@
                                     <!-- menu column -->
                                     <div class="menu-column">
                                         <!-- icon -->
-                                        <div class="menu-column__icon">
+                                        <div class="menu-column__icon d-lg-none">
                                             <img src="./assets/img/category/cate-1.1.svg" alt=""
                                                 class="menu-column__icon-1">
                                             <img src="./assets/img/category/cate-1.2.svg" alt=""
@@ -39,7 +56,7 @@
                                         <!-- content -->
                                         <div class="menu-column__content">
                                             <a href="#!">
-                                                <h2 class="menu-column__heading">
+                                                <h2 class="menu-column__heading d-lg-none">
                                                     All Departments
                                                 </h2>
                                             </a>
@@ -4980,18 +4997,19 @@
                 </li>
             </ul>
         </nav>
+        <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
 
         <!-- action -->
         <div class="top-act">
             <!-- group-1 -->
-            <div class="top-act__group top-act__group--single">
+            <div class="top-act__group d-md-none top-act__group--single">
                 <button class="top-act__btn">
                     <img src="./assets/icons/search.svg" alt="" class="top-act__icon icon">
                 </button>
             </div>
 
             <!-- group-2 -->
-            <div class="top-act__group">
+            <div class="top-act__group d-md-none">
                 <button class="top-act__btn">
                     <img src="./assets/icons/heart.svg" alt="" class="top-act__icon icon">
                     <span class="top-act__title">03</span>
