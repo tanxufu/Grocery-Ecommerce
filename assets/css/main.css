@@ -2519,6 +2519,10 @@ html {
   }
 }
 
+.form:has(:invalid) .form__submit-btn {
+  opacity: 0.5;
+  pointer-events: none;
+}
 .form__group {
   margin-top: 30px;
 }
@@ -2632,9 +2636,18 @@ html {
   display: none;
   margin-left: 12px;
 }
-.form:has(:invalid) .form__submit-btn {
-  opacity: 0.5;
-  pointer-events: none;
+
+.message {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+.message--success {
+  background: rgba(39, 243, 117, 0.2);
+  border: 2px solid #46a05c;
 }
 
 .home__container {
@@ -2717,6 +2730,7 @@ html {
   bottom: 50px;
 }
 .auth__intro-img {
+  width: var(--width);
   max-width: 100%;
 }
 .auth__content {
@@ -2768,9 +2782,15 @@ html {
   font-weight: 500;
   line-height: 1.46;
 }
+.auth__message {
+  margin-top: 30px;
+}
 .auth__form {
   width: 100%;
   margin-top: 30px;
+}
+.auth__form-forgot {
+  margin-top: 10px;
 }
 @media (max-width: 767.98px) {
   .auth__form {
