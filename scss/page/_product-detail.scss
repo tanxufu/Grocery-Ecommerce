@@ -219,3 +219,71 @@
         line-height: 1.44;
     }
 }
+
+.prod-tab {
+    &__list {
+        display: flex;
+        align-items: center;
+
+        margin-left: -30px;
+
+        @include abstracts.screen(md) {
+            margin-left: -20px;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        padding: 0 30px;
+
+        color: #9e9da8;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.45;
+        user-select: none;
+        white-space: nowrap;
+
+        @include abstracts.screen(md) {
+            padding: 8px 20px;
+            font-size: 1.8rem;
+        }
+
+        &:not(&--current) {
+            cursor: pointer;
+        }
+
+        &--current {
+            color: inherit;
+        }
+    }
+
+    &__contents {
+        padding-top: 30px;
+    }
+
+    &__content {
+        display: none;
+
+        &--current {
+            display: block;
+        }
+    }
+
+    &__text-content {
+        margin-top: -20px;
+    }
+}
+
+.prod-content {
+    &__heading {
+        margin-bottom: 30px;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.41;
+
+        @include abstracts.screen(md) {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+    }
+}
