@@ -49,19 +49,19 @@
             <!-- breadcrumbs -->
             <div class="checkout-container">
                 <ul class="breadcrumbs checkout-page__breadcrumbs">
-                    <li>
+                    <li class="form__option">
                         <a href="./" class="breadcrumbs__link">
                             Home
                             <img src="./assets/icons/arrow-right.svg" alt="">
                         </a>
                     </li>
-                    <li>
+                    <li class="form__option">
                         <a href="./checkout.html" class="breadcrumbs__link">
                             Checkout
                             <img src="./assets/icons/arrow-right.svg" alt="">
                         </a>
                     </li>
-                    <li>
+                    <li class="form__option">
                         <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">
                             Shipping
                         </a>
@@ -489,8 +489,83 @@
                         <label for="city" class="form__label form__label--small">City/District/Town</label>
                         <div class="form__text-input form__text-input--small">
                             <input type="text" name="city" id="city" placeholder="City/District/Town"
-                                class="form__input">
+                                class="form__input js-toggle" toggle-target="#city-dialog" autocomplete="off">
                             <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error">
+
+                            <!-- select -->
+                            <div class="form__select-dialog hide" id="city-dialog">
+                                <button class="form__close-dialog d-none d-sm-block js-toggle"
+                                    toggle-target="#city-dialog">&times;</button>
+                                <div class="form__search">
+                                    <input type="text" name="" id="" class="form__search-input" placeholder="Search">
+                                    <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon">
+                                </div>
+                                <ul class="form__option-list">
+                                    <li class="form__option form__option--current">TP Hồ Chí Minh</li>
+                                    <li class="form__option">Hà Nội</li>
+                                    <li class="form__option">Đà Nẵng</li>
+                                    <li class="form__option">An Giang</li>
+                                    <li class="form__option">Bà Rịa – Vũng Tàu</li>
+                                    <li class="form__option">Bắc Giang</li>
+                                    <li class="form__option">Bắc Kạn</li>
+                                    <li class="form__option">Bạc Liêu</li>
+                                    <li class="form__option">Bắc Ninh</li>
+                                    <li class="form__option">Bến Tre</li>
+                                    <li class="form__option">Bình Định</li>
+                                    <li class="form__option">Bình Dương</li>
+                                    <li class="form__option">Bình Phước</li>
+                                    <li class="form__option">Bình Thuận</li>
+                                    <li class="form__option">Cà Mau</li>
+                                    <li class="form__option">Cần Thơ</li>
+                                    <li class="form__option">Cao Bằng</li>
+                                    <li class="form__option">Đắk Lắk</li>
+                                    <li class="form__option">Đắk Nông</li>
+                                    <li class="form__option">Điện Biên</li>
+                                    <li class="form__option">Đồng Nai</li>
+                                    <li class="form__option">Đồng Tháp</li>
+                                    <li class="form__option">Gia Lai</li>
+                                    <li class="form__option">Hà Giang</li>
+                                    <li class="form__option">Hà Nam</li>
+                                    <li class="form__option">Hà Tĩnh</li>
+                                    <li class="form__option">Hải Dương</li>
+                                    <li class="form__option">Hải Phòng</li>
+                                    <li class="form__option">Hậu Giang</li>
+                                    <li class="form__option">Hòa Bình</li>
+                                    <li class="form__option">Hưng Yên</li>
+                                    <li class="form__option">Khánh Hòa</li>
+                                    <li class="form__option">Kiên Giang</li>
+                                    <li class="form__option">Kon Tum</li>
+                                    <li class="form__option">Lai Châu</li>
+                                    <li class="form__option">Lâm Đồng</li>
+                                    <li class="form__option">Lạng Sơn</li>
+                                    <li class="form__option">Lào Cai</li>
+                                    <li class="form__option">Long An</li>
+                                    <li class="form__option">Nam Định</li>
+                                    <li class="form__option">Nghệ An</li>
+                                    <li class="form__option">Ninh Bình</li>
+                                    <li class="form__option">Ninh Thuận</li>
+                                    <li class="form__option">Phú Thọ</li>
+                                    <li class="form__option">Phú Yên</li>
+                                    <li class="form__option">Quảng Bình</li>
+                                    <li class="form__option">Quảng Nam</li>
+                                    <li class="form__option">Quảng Ngãi</li>
+                                    <li class="form__option">Quảng Ninh</li>
+                                    <li class="form__option">Quảng Trị</li>
+                                    <li class="form__option">Sóc Trăng</li>
+                                    <li class="form__option">Sơn La</li>
+                                    <li class="form__option">Tây Ninh</li>
+                                    <li class="form__option">Thái Bình</li>
+                                    <li class="form__option">Thái Nguyên</li>
+                                    <li class="form__option">Thanh Hóa</li>
+                                    <li class="form__option">Thừa Thiên Huế</li>
+                                    <li class="form__option">Tiền Giang</li>
+                                    <li class="form__option">Trà Vinh</li>
+                                    <li class="form__option">Tuyên Quang</li>
+                                    <li class="form__option">Vĩnh Long</li>
+                                    <li class="form__option">Vĩnh Phúc</li>
+                                    <li class="form__option">Yên Bái</li>
+                                </ul>
+                            </div>
                         </div>
                         <p class="form__error">Please select city/district/town</p>
                     </div>

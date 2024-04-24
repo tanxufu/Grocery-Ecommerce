@@ -65,7 +65,7 @@ $error-color: #ed4337;
         border: 2px solid #d2d1d6;
 
         &--small {
-            border-radius: 6px;
+            border-radius: 8px;
             border: 1px solid #d2d1d6;
         }
 
@@ -88,6 +88,7 @@ $error-color: #ed4337;
     }
 
     &__text-input {
+        position: relative;
         height: 50px;
 
         &--small {
@@ -120,6 +121,117 @@ $error-color: #ed4337;
     &__input {
         &-icon {
             margin-left: 12px;
+        }
+    }
+
+    &__select-dialog {
+        position: absolute;
+        z-index: 1;
+        bottom: 44px;
+        left: 6px;
+
+        display: flex;
+        flex-direction: column;
+
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 -8px;
+        transition: opacity visibility translate;
+        transition-duration: 0.2s;
+
+        min-width: 230px;
+        max-height: 310px;
+        padding-bottom: 10px;
+        background: var(--form-select-dialog-bg);
+        border-radius: 10px;
+        border: 1px solid #d2d1d6;
+        box-shadow: 0 0 5px var(--form-select-dialog-shadow);
+
+        @include abstracts.screen(sm) {
+            position: fixed;
+            max-width: initial;
+            max-height: initial;
+            inset: 0;
+            border-radius: 0;
+        }
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            translate: 0;
+        }
+    }
+
+    &__close-dialog {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 2px 18px;
+        opacity: 0.8;
+        font-size: 3rem;
+    }
+
+    &__search {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        border-bottom: 1px solid #d2d1d6;
+
+        height: 38px;
+        padding: 0 20px;
+
+        @include abstracts.screen(lg) {
+            height: 42px;
+        }
+
+        @include abstracts.screen(sm) {
+            flex-direction: row-reverse;
+            margin-top: 30px;
+        }
+
+        &-input {
+            flex: 1;
+            height: 100%;
+            font-size: 1.6rem;
+
+            @include abstracts.screen(sm) {
+                padding-left: 10px;
+            }
+        }
+
+        &-icon {
+            width: 18px;
+            margin-left: 10px;
+
+            @include abstracts.screen(sm) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__option-list {
+        flex: 1;
+        margin-top: 10px;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    &__option {
+        padding: 6px 20px;
+        font-size: 1.4rem;
+
+        @include abstracts.screen(lg) {
+            padding: 14px 20px;
+        }
+
+        &--current {
+            font-weight: 500;
+            background: rgba($color: #ffb700, $alpha: 0.6);
+        }
+
+        &:not(&--current):hover {
+            cursor: pointer;
+            background: var(--form-ooption-hover-bg);
         }
     }
 
