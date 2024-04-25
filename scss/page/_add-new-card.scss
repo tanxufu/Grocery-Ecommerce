@@ -1,0 +1,18 @@
+.form-card {
+    &__label {
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 30px;
+    }
+
+    &__cancel {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+}

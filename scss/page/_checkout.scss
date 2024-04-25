@@ -38,6 +38,9 @@
     }
 
     &__heading {
+        display: flex;
+        align-items: center;
+
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 1.42;
@@ -47,6 +50,13 @@
             font-weight: 500;
             line-height: 1.45;
         }
+    }
+
+    &__back-arrow {
+        position: relative;
+        top: 5px;
+        width: 50px;
+        padding-right: 20px;
     }
 
     &__sub-heading {
