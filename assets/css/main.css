@@ -1437,8 +1437,7 @@ html {
   --form-placeholder-color: #d2d1d6;
   --form-select-dialog-shadow: rgba($color: #000000, $alpha: 0.15);
   --form-select-dialog-bg: #fff;
-  --form-ooption-hover-bg: #d2d1d6
-  // product detail
+  --form-ooption-hover-bg: #d2d1d6;
   --product-detail-bg: #fff;
   --product-detail-info-bg: #f6f6f6;
   --product-detail-info-container-bg: #fff;
@@ -1494,6 +1493,8 @@ html {
 }
 
 .header {
+  position: relative;
+  z-index: 2;
   background: var(--header-bg);
 }
 
@@ -2428,6 +2429,10 @@ html {
 .btn--rounded {
   border-radius: 99px;
 }
+.btn--danger {
+  color: var(--button-danger-color, #fff);
+  background: #ed4337;
+}
 .btn[disabled], .btn--disabled {
   opacity: 0.5;
   pointer-events: none;
@@ -2805,11 +2810,17 @@ html {
   visibility: visible;
   translate: 0;
 }
+.form__dialog-heading {
+  padding: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+}
 .form__close-dialog {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 2px 18px;
+  padding: 6px 18px;
   opacity: 0.8;
   font-size: 3rem;
 }
@@ -2823,13 +2834,14 @@ html {
 }
 @media (max-width: 991.98px) {
   .form__search {
-    height: 42px;
+    height: 48px;
   }
 }
 @media (max-width: 575.98px) {
   .form__search {
-    flex-direction: row-reverse;
-    margin-top: 30px;
+    border: 1px solid #d2d1d6;
+    margin: 10px 0 0;
+    padding: 0 30px;
   }
 }
 .form__search-input {
@@ -2837,18 +2849,13 @@ html {
   height: 100%;
   font-size: 1.6rem;
 }
-@media (max-width: 575.98px) {
-  .form__search-input {
-    padding-left: 10px;
-  }
-}
 .form__search-icon {
   width: 18px;
   margin-left: 10px;
 }
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   .form__search-icon {
-    margin-left: 0;
+    width: 20px;
   }
 }
 .form__option-list {
@@ -2857,13 +2864,19 @@ html {
   overflow-y: auto;
   overscroll-behavior: contain;
 }
+@supports (-webkit-touch-callout: none) {
+  .form__option-list {
+    padding-bottom: 300px;
+  }
+}
 .form__option {
   padding: 6px 20px;
   font-size: 1.4rem;
 }
 @media (max-width: 991.98px) {
   .form__option {
-    padding: 14px 20px;
+    padding: 18px 30px;
+    font-size: 1.6rem;
   }
 }
 .form__option--current {
@@ -3052,7 +3065,7 @@ html {
   flex: 1;
   height: 100%;
   padding-left: 15px;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.42;
 }
@@ -3287,7 +3300,7 @@ html {
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   margin-top: 30px;
   padding-right: 10px;
 }
@@ -3298,7 +3311,7 @@ html {
 }
 @media (max-width: 575.98px) {
   .modal__bottom {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 }
 @media (max-width: 767.98px) {
