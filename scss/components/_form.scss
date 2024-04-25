@@ -321,6 +321,13 @@ $error-color: #ed4337;
         line-height: 1.45;
         user-select: none;
 
+        &--medium {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 1.44;
+        }
+
         &--small {
             margin-bottom: 10px;
             font-size: 1.4rem;
