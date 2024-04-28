@@ -5191,102 +5191,61 @@
             </div>
 
             <!-- avt -->
-            <a href="./profile.html" class="top-act__user">
+            <div class="top-act__user">
                 <img src="./assets/img/avt-img.jpg" alt="" class="top-act__avt">
-
                 <!-- dropdown -->
-                <div class="act-dropdown">
-                    <div class="act-dropdown__inner">
-                        <img src="./assets/icons/arrow-up.png" alt="" class="act-dropdown__arrow">
-                        <!-- top -->
-                        <div class="act-dropdown__top">
-                            <h2 class="act-dropdown__title">
-                                You have 3 item(s)
-                            </h2>
-                            <a href="./checkout.html" class="act-dropdown__view-all">See All</a>
-                        </div>
+                <div class="act-dropdown top-act__dropdown">
+                    <div class="act-dropdown__inner user-menu">
+                        <img src="./assets/icons/arrow-up.png" alt=""
+                            class="act-dropdown__arrow top-act__dropdown-arrow">
 
-                        <!-- mid -->
-                        <div class="row row-cols-3 gx-2">
-                            <!-- item-1 -->
-                            <div class="col">
-                                <article class="cart-preview-item">
-                                    <div class="cart-preview-item__img-wrap">
-                                        <img src="./assets/img/product/item-1.png" alt=""
-                                            class="cart-preview-item__thumb">
-                                    </div>
-                                    <h3 class="cart-preview-item__title">
-                                        Lavazza Coffee Blends
-                                    </h3>
-                                    <p class="cart-preview-item__price">$329.00</p>
-                                </article>
-                            </div>
-
-                            <!-- item-2 -->
-                            <div class="col">
-                                <article class="cart-preview-item">
-                                    <div class="cart-preview-item__img-wrap">
-                                        <img src="./assets/img/product/item-4.png" alt=""
-                                            class="cart-preview-item__thumb">
-                                    </div>
-                                    <h3 class="cart-preview-item__title">
-                                        Coffee Beans Espresso
-                                    </h3>
-                                    <p class="cart-preview-item__price">$39.39</p>
-                                </article>
-                            </div>
-
-                            <!-- item-3 -->
-                            <div class="col">
-                                <article class="cart-preview-item">
-                                    <div class="cart-preview-item__img-wrap">
-                                        <img src="./assets/img/product/item-3.png" alt=""
-                                            class="cart-preview-item__thumb">
-                                    </div>
-                                    <h3 class="cart-preview-item__title">
-                                        Qualità Oro Mountain
-                                    </h3>
-                                    <p class="cart-preview-item__price">$47.00</p>
-                                </article>
+                        <div class="user-menu__top">
+                            <img src="./assets/img/avt-img.jpg" alt="" class="user-menu__avatar">
+                            <div>
+                                <p class="user-menu__name">
+                                    Imran Khan
+                                </p>
+                                <p>
+                                    imrankhan@gmail.com
+                                </p>
                             </div>
                         </div>
 
-                        <!-- bottom -->
-                        <div class="act-dropdown__bottom">
-                            <!-- row-1 -->
-                            <div class="act-dropdown__row">
-                                <span class="act-dropdown__label">Subtotal</span>
-                                <span class="act-dropdown__value">$415.99</span>
-                            </div>
-
-                            <!-- row-2 -->
-                            <div class="act-dropdown__row">
-                                <span class="act-dropdown__label">Texes</span>
-                                <span class="act-dropdown__value">Free</span>
-                            </div>
-
-                            <!-- row-1 -->
-                            <div class="act-dropdown__row">
-                                <span class="act-dropdown__label">Shipping</span>
-                                <span class="act-dropdown__value">$10.00</span>
-                            </div>
-
-                            <!-- row-1 -->
-                            <div class="act-dropdown__row act-dropdown__row--bold">
-                                <span class="act-dropdown__label">Total Price</span>
-                                <span class="act-dropdown__value">$425.99</span>
-                            </div>
-                        </div>
-
-                        <!-- checkout -->
-                        <div class="act-dropdown__checkout">
-                            <a href="./checkout.html"
-                                class="btn btn--primary btn--rounded act-dropdown__checkout-btn">Check Out
-                                All</a>
-                        </div>
+                        <ul class="user-menu__list">
+                            <li>
+                                <a href="./profile.html" class="user-menu__link">
+                                    <img src="./assets/icons/user.svg" alt="" class="icon user-menu__icon">
+                                    Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./favourite.html" class="user-menu__link">
+                                    <img src="./assets/icons/favourite.svg" alt="" class="icon user-menu__icon">
+                                    Favourite List
+                                </a>
+                            </li>
+                            <li class="user-menu__separate">
+                                <a href="./favourite.html" id="switch-theme-btn" class="user-menu__link">
+                                    <img src="./assets/icons/sun-dark.svg" alt="" class="icon user-menu__icon">
+                                    <span>Dark mode</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!" class="user-menu__link">
+                                    <img src="./assets/icons/setting.svg" alt="" class="icon user-menu__icon">
+                                    Setting
+                                </a>
+                            </li>
+                            <li class="user-menu__separate">
+                                <a href="./sign-in.html" class="user-menu__link">
+                                    <img src="./assets/icons/log-out.svg" alt="" class="icon user-menu__icon">
+                                    Log out
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
 </div>
